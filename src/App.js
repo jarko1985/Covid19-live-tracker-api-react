@@ -23,7 +23,7 @@ function App() {
     };
     fetchData();
   }, []);
-
+  //some comment from emailupdate
   return (
     <div className="App">
       <Header />
