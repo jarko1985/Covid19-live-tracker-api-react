@@ -16,6 +16,7 @@ function App() {
         url: "https://api.covid19api.com/summary",
       });
 
+      console.log(isLoading);
       console.log(result.data.Countries);
       setItems(result.data.Countries);
       setIsLoading(false);
@@ -31,5 +32,4 @@ function App() {
   );
 }
 
-//Hassan was here
 export default App;
