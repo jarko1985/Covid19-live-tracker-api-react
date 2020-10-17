@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import Header from './components/Header';
-import CharacterGrid from './components/CharacterGrid';
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import Header from "./components/Header";
+import CharacterGrid from "./components/CharacterGrid";
 
-import './App.css';
+import "./App.css";
 
 function App() {
   const [items, setItems] = useState([]);
@@ -11,16 +11,9 @@ function App() {
 
   useEffect(() => {
     const fetchData = async () => {
-      // const result = await axios.get(
-      //   `https://www.breakingbadapi.com/api/characters`
-      // );
-      // console.log(result.data);
-      // setItems(result.data);
-      // setIsLoading(false);
-
       const result = await axios({
-        method: 'GET',
-        url: 'https://api.covid19api.com/summary',
+        method: "GET",
+        url: "https://api.covid19api.com/summary",
       });
 
       console.log(result.data.Countries);
@@ -31,11 +24,12 @@ function App() {
   }, []);
 
   return (
-    <div className='App'>
+    <div className="App">
       <Header />
       <CharacterGrid isLoading={isLoading} items={items} />
     </div>
   );
 }
 
+//Hassan was here
 export default App;
